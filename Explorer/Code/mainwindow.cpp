@@ -172,8 +172,9 @@ void MainWindow::on_listView_doubleClicked(const QModelIndex &index)
             for(int i = str.lastIndexOf('.'); i < str.size(); i++) {
                 resolution.append(str[i]);
             }
-            if (resolution != ".jpg" && resolution != ".gif" && resolution != ".tif" && resolution != ".bmp" &&
-                    resolution != ".png" && resolution != ".pcx" && resolution != ".BMP") {
+            if (resolution != ".jpg" && resolution != ".JPG" && resolution != ".gif" && resolution != ".GIF" &&
+                resolution != ".tif" && resolution != ".TIF" && resolution != ".bmp" && resolution != ".BMP" &&
+                    resolution != ".png" && resolution != ".PNG" && resolution != ".pcx" && resolution != ".PCX") {
                 return;
             }
             ui->setRes->setText(resolution);
@@ -255,8 +256,9 @@ void MainWindow::on_pbChoice_clicked()
         for(int i = temp.fileName().lastIndexOf('.'); i < temp.fileName().size(); i++) {
             resolution.append(temp.fileName()[i]);
         }
-        if (resolution != ".jpg" && resolution != ".gif" && resolution != ".tif" && resolution != ".bmp" &&
-                resolution != ".png" && resolution != ".pcx" && resolution != ".BMP") {
+        if (resolution != ".jpg" && resolution != ".JPG" && resolution != ".gif" && resolution != ".GIF" &&
+                resolution != ".tif" && resolution != ".TIF" && resolution != ".bmp" && resolution != ".BMP" &&
+                    resolution != ".png" && resolution != ".PNG" && resolution != ".pcx" && resolution != ".PCX") {
             twInfo->setRowCount(twInfo->rowCount()-1);
             continue;
         }
